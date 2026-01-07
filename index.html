@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body
-    class="bg-secendary-700 font-roboto text-base/normal flex flex-col justify-center items-center min-h-screen"
+    class="bg-secondary-700 font-roboto text-base/normal flex flex-col justify-center items-center min-h-screen"
   >
     <main>
       <div
         id="signUpCard"
-        class="bg-white flex flex-col overflow-hidden lg:flex-row-reverse text-secendary-700 w-full max-w-4xl lg:p-6 md:rounded-2xl lg:rounded-4xl"
+        class="bg-white flex flex-col overflow-hidden lg:flex-row-reverse text-secondary-700 w-full max-w-4xl lg:p-6 md:rounded-2xl lg:rounded-4xl"
       >
         <picture>
           <source
@@ -63,13 +63,13 @@
 
           <form id="emailForm" novalidate class="flex flex-col">
             <div class="flex justify-between text-sm font-bold mb-2">
-              <label class="text-secendary-800" for="email"
+              <label class="text-secondary-800" for="email"
                 >Email address</label
               >
-              <p id="errMsg" class="text-primary"></p>
+              <span id="errMsg" class="text-primary" role="alert"></span>
             </div>
             <input
-              class="pl-6 h-14 border-2 border-grey rounded-lg text-secendary-800"
+              class="pl-6 h-14 border-2 border-grey rounded-lg text-secondary-800"
               type="email"
               id="emailInput"
               placeholder="email@company.com"

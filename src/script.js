@@ -12,13 +12,19 @@ emailForm.addEventListener("submit", (e) => {
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   if (!isValidEmail) {
+    emailInput.setAttribute("aria-invalid", "true");
     emailInput.classList.add("err-input", "animate-shake");
     errMsg.innerText = "valid email required";
-    emailInput.addEventListener("animationend", () => {
-      emailInput.classList.remove("animate-shake");
-    });
+    emailInput.addEventListener(
+      "animationend",
+      () => {
+        emailInput.classList.remove("animate-shake");
+      },
+      { once: true }
+    );
     return;
   } else {
+    emailInput.setAttribute("aria-invalid", "false");
     emailInput.classList.remove("err-input");
     errMsg.innerText = "";
   }

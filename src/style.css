@@ -15,8 +15,8 @@
 
 @theme {
   --color-primary: hsl(4, 100%, 67%);
-  --color-secendary-800: hsl(234, 29%, 20%);
-  --color-secendary-700: hsl(235, 18%, 26%);
+  --color-secondary-800: hsl(234, 29%, 20%);
+  --color-secondary-700: hsl(235, 18%, 26%);
   --color-grey: hsl(0, 0%, 58%);
   --color-white: hsl(0, 0%, 100%);
 
@@ -83,7 +83,7 @@
 
 @layer components {
   .btn-primary {
-    @apply w-full h-14 bg-secendary-800 text-white font-bold rounded-lg cursor-pointer;
+    @apply w-full h-14 bg-secondary-800 text-white font-bold rounded-lg cursor-pointer;
     transition: all 0.3s ease;
     &:hover {
       background: linear-gradient(
@@ -101,7 +101,9 @@
   }
 
   .fluid-heading {
-    @apply text-fluid-heading  text-secendary-800 font-bold;
+    font-size: var(--text-fluid-heading);
+    font-weight: 700;
+    color: var(--color-secondary-800);
     line-height: 1.1;
   }
   .card {
