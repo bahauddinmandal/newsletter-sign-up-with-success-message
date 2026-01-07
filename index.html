@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body
+    class="bg-secendary-700 font-roboto text-base/normal flex flex-col justify-center items-center min-h-screen"
+  >
+    <main>
+      <div
+        id="signUpCard"
+        class="bg-white flex flex-col overflow-hidden lg:flex-row-reverse text-secendary-700 w-full max-w-4xl lg:p-6 md:rounded-2xl lg:rounded-4xl"
+      >
+        <picture>
+          <source
+            media="(min-width: 64rem)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            media="(min-width: 48rem)"
+            srcset="./assets/images/illustration-sign-up-tablet.svg"
+          />
+
+          <img
+            class="w-full h-full object-cover"
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            width="375"
+            height="284"
+          />
+        </picture>
+        <div class="px-6 py-10 lg:px-10 lg:py-12">
+          <h1 class="fluid-heading">Stay updated!</h1>
+          <p class="py-6">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="flex flex-col gap-2.5 mb-10">
+            <li class="flex gap-4">
+              <img src="./assets/images/icon-list.svg" alt="" />Product
+              discovery and building what matters
+            </li>
+            <li class="flex gap-4">
+              <img src="./assets/images/icon-list.svg" alt="" />Measuring to
+              ensure updates are a success
+            </li>
+            <li class="flex gap-4">
+              <img src="./assets/images/icon-list.svg" alt="" />And much more!
+            </li>
+          </ul>
+
+          <form id="emailForm" novalidate class="flex flex-col">
+            <div class="flex justify-between text-sm font-bold mb-2">
+              <label class="text-secendary-800" for="email"
+                >Email address</label
+              >
+              <p id="errMsg" class="text-primary"></p>
+            </div>
+            <input
+              class="pl-6 h-14 border-2 border-grey rounded-lg text-secendary-800"
+              type="email"
+              id="emailInput"
+              placeholder="email@company.com"
+            />
+            <button class="btn-primary mt-6" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- === success message === -->
+      <div
+        id="successMsg"
+        style="display: none"
+        class="z-10 w-full h-screen md:w-xl md:h-auto bg-white p-6 pt-16 md:p-16 md:rounded-4xl flex flex-col gap-6 animate-popup"
+      >
+        <img
+          style="animation-delay: 0.1s"
+          class="animate-icon-bounce"
+          src="./assets/images/icon-success.svg"
+          alt=""
+          width="64"
+          height="64"
+        />
+        <h1 class="fluid-heading">Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <b id="successEmail"></b>. Please open it and click the button inside
+          to confirm your subscription.
+        </p>
+        <button id="dismissBtn" class="btn-primary mt-auto" type="button">
+          Dismiss message
+        </button>
+      </div>
+    </main>
+
+    <footer class="mt-16">
+      <div class="text-xs text-center text-grey">
+        Challenge by
+        <a
+          class="text-primary"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a class="text-primary" href="#">Your Name Here</a>.
+      </div>
+    </footer>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
